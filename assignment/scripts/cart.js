@@ -77,6 +77,18 @@ console.log(`I believe 5 items is our max, is our basket now full (should read t
 console.log(`Trying to add 1 more item now that we are full(should read false): ${addItem('ginger')}`);
 console.log(`Opps, we couldn't add it beause our basket is full, correct? ${isFull(basket)}`);
 
+
 function removeItem(inputItem) {
-  
+  let index = basket.indexOf(inputItem);
+  if (index > -1) {
+    basket.splice(index, 1);
+    return inputItem;
+  }
+  else{
+    return null;
+  }
 }
+
+console.log(`Testing removing ${removeItem('jalapenos')} from our basket.`);
+console.log(`Jalapenos are no longer in our basket: ${basket}`);
+console.log(`Try to remove an item that isn't in our basket - ginger: ${removeItem('ginger')}`);
