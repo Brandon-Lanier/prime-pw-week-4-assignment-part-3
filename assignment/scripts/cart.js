@@ -3,7 +3,7 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 
 let basket = [];
-const maxItems = 5;
+const maxItems = 5;  // Had to put the maxItems variable above the addItem function to make the stretch goal work.
 
 function addItem(item) {
   if (isFull()) {
@@ -14,6 +14,7 @@ function addItem(item) {
     return true;
   }
 }
+
 
 console.log('Checking that the cart is empty:', basket);
 
@@ -50,7 +51,8 @@ console.log('Is our basket empty?', basket);
 
 // Stetch goals
 
-// Had to move my maxItems const to the top of the page for this to work.  Wanted the variable declared before I edited the addItems function.
+// Had to move my maxItems variable to the top of the page for this to work.
+// Wanted the variable declared before I edited the addItems function.
 
 function isFull() {
   if (basket.length >= maxItems) {
